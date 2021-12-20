@@ -1,0 +1,162 @@
+<!-- Buttons -->
+<div>
+  <div class="mat-display-1" style="margin-left: 40%">Buttons</div>
+
+  <!-- Normal buttons -->
+  <div>
+    <button mat-button>Click me</button>
+    <button mat-raised-button>Click me</button>
+    <button mat-flat-button>Click me</button>
+    <button mat-stroked-button>Click me</button>
+  </div>
+
+  <!-- Circular buttons -->
+  <div>
+    <button mat-icon-button>Icon</button>
+    <button mat-fab>Fab</button>
+    <button mat-mini-fab>Fab</button>
+  </div>
+
+  <!-- Buttons with some standard colors -->
+  <div>
+    <button color="warn" mat-button>Warning</button>
+    <button color="primary" mat-button>Primary</button>
+    <button color="accent" mat-button>Accent</button>
+    <button color="warn" mat-raised-button>Warning</button>
+    <button color="primary" mat-raised-button>Primary</button>
+    <button color="accent" mat-raised-button>Accent</button>
+  </div>
+</div>
+<hr />
+
+<!-- Button toggles -->
+<div>
+  <div class="mat-display-1" style="margin-left: 40%">Button toggles</div>
+
+  <!-- Button toggle checked -->
+  <div>
+    <mat-button-toggle #tglButton>Toggle me</mat-button-toggle
+    >{{ tglButton.checked }}
+  </div>
+
+  <!-- Button toggle group (single check) -->
+  <div>
+    <mat-button-toggle-group #tglGroup="matButtonToggleGroup">
+      <mat-button-toggle value="angular">Angular</mat-button-toggle>
+      <mat-button-toggle value="react">React</mat-button-toggle>
+      <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{ tglGroup.value }}
+  </div>
+
+  <!-- Button toggle group (multiple check) -->
+  <div>
+    <mat-button-toggle-group #tglGroupMultiple="matButtonToggleGroup" multiple>
+      <mat-button-toggle value="angular">Angular</mat-button-toggle>
+      <mat-button-toggle value="react">React</mat-button-toggle>
+      <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{ tglGroupMultiple.value }}
+  </div>
+</div>
+<hr />
+
+<!-- Icons -->
+<div>
+  <div class="mat-display-1" style="margin-left: 40%">Icons</div>
+
+  <mat-icon color="primary">home</mat-icon>
+</div>
+<hr />
+
+<!-- Badges -->
+<div>
+  <div class="mat-display-1" style="margin-left: 40%">Badges</div>
+
+  <div>
+    <div>
+      <span matBadge="4">Notification</span>
+    </div>
+    <div>
+      <span matBadge="3" matBadgeOverlap="false">Notification</span>
+    </div>
+    <div>
+      <span [matBadge]="notificationCount" matBadgeOverlap="false"
+        >Notification</span
+      >
+    </div>
+  </div>
+</div>
+<hr />
+
+<!-- Progress spinner -->
+<div>
+  <div class="mat-display-1" style="margin-left: 40%">Spinners</div>
+
+  <!-- Spinner with specific value (used for showing progress of download/upload etc) -->
+  <div>
+    <mat-progress-spinner value="50"></mat-progress-spinner>
+  </div>
+
+  <!-- Continuos loading spinner-->
+  <div>
+    <button mat-raised-button (click)="stopSpinner()">Stop spinner</button>
+    <button mat-raised-button (click)="startSpinner()">Start spinner</button>
+    <mat-spinner color="warn" *ngIf="isSpinning"></mat-spinner>
+  </div>
+</div>
+<hr />
+
+<!-- Toolbar -->
+<div>
+  <div class="mat-display-1" style="margin-left: 40%">Toolbar</div>
+
+  <mat-toolbar color="primary" class="navbar">
+    <div>Home</div>
+    <div>
+      <button mat-flat-button>Settings</button>
+      <button mat-flat-button>About</button>
+    </div>
+  </mat-toolbar>
+</div>
+<hr />
+
+<!-- Sidenav -->
+<div>
+  <div class="mat-display-1" style="margin-left: 40%">Sidenav</div>
+
+  <mat-drawer-container class="example-container">
+    <!-- Side nav content -->
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <button mat-raised-button>Click me</button>
+    </mat-drawer>
+
+    <!-- Main content -->
+    <div>
+      <button
+        type="button"
+        color="primary"
+        mat-raised-button
+        (click)="drawer.toggle()"
+      >
+        Toggle sidenav
+      </button>
+    </div>
+  </mat-drawer-container>
+</div>
+<hr />
+
+<!-- Menu -->
+<div>
+  <div class="mat-display-1" style="margin-left: 40%">Menu</div>
+
+  <div>
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item>Angular</button>
+      <button mat-menu-item>React</button>
+    </mat-menu>
+
+    <button mat-raised-button [mat-menu-trigger-for]="appMenu">Menu</button>
+  </div>
+</div>
+<hr />
