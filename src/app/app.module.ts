@@ -13,7 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoComponent } from './components/demo/demo.component';
 import { RouterModule } from '@angular/router';
 import { ConceptsComponent } from './components/concepts/concepts.component';
@@ -22,7 +22,12 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MaterialTableComponent } from './components/material-table/material-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { SaiTaskComponent } from './components/sai-task/sai-task.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ConceptsComponent,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
+    MaterialTableComponent,
+    SaiTaskComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,9 +56,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     FormsModule,
     RouterModule,
     MatGridListModule,
+    MatPaginatorModule,
     MatSelectModule,
     MatRadioModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTableModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

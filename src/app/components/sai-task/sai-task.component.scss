@@ -1,0 +1,32 @@
+.container {
+    background-color: lightblue;
+}
+mat-grid-tile {
+    background-color: white;
+    // margin: 1px;
+}
+
+
+.mh-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.contender-input {
+    display: flex; 
+    flex-direction: column;
+    margin-left: 5px;
+    align-items: flex-start;
+    justify-content: left;
+    min-width: 100%;
+}
+
+.contender-form {
+    display: flex;
+}
+
+table {
+    width: 100%;
+}

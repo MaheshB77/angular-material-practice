@@ -1,1 +1,33 @@
-<p>reactive-form works!</p>
+<div class="container">
+  <form class="form-container" [formGroup]="registrationForm">
+    <h1>User form</h1>
+    <p>{{ registrationForm.value | json }}</p>
+    <mat-form-field class="example-form-field" appearance="outline">
+      <mat-label>User name</mat-label>
+      <input
+        matInput
+        type="text"
+        name="userName"
+        formControlName="userName"
+      />
+      <mat-error >
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" name="email" formControlName="password" />
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field" appearance="outline">
+      <mat-label>Confirm password</mat-label>
+      <input
+        matInput
+        type="text"
+        name="confirmPassword"
+        formControlName="confirmPassword"
+      />
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!registrationForm.valid">Submit</button>
+  </form>
+</div>
